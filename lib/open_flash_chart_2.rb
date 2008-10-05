@@ -381,7 +381,7 @@ module OFC2
       @text = text
       @font__size = size
     end
-    %w(alpha colour values text font_size).each do |method|
+    %w(alpha colour values text font_size tooltip).each do |method|
       define_method("set_#{method}") do |a|
         self.instance_variable_set("@#{method.gsub('_','__')}", a)
       end
@@ -548,7 +548,7 @@ module OFC2
       @border			= border
       @values			= values
     end
-    %w(colours alpha border values animate start_angle).each do |method|
+    %w(colours alpha border values animate start_angle tooltip).each do |method|
       define_method("set_#{method}") do |a|
         self.instance_variable_set("@#{method.gsub('_','__')}", a)
       end
